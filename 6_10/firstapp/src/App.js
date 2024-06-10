@@ -6,7 +6,7 @@ import MyComponent from './MyComponent.js';
 import Counter from './Counter';
 
 const App = () => {
-  return <Counter/>;
+  return <Counter />;
 };
 
 // function App() {
