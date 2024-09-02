@@ -2,9 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import data from './Routes/data.js'
-import Detail from './Routes/Detail.js';
 import { useState } from 'react';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
+import Detail from './Routes/Detail.js';
 
 function App() {
   let [shoes] = useState(data)
@@ -38,17 +38,31 @@ function App() {
         <Route path='/detail' element={<Detail/>}></Route>
         <Route path="*" element={<div>없는 페이지입니다 404 Error</div>}></Route>
         <Route path="/about" element={<About/>}>
-          <Route path="member" element={<About/>}></Route>
+          <Route path="member" element={<div>맴버입니다</div>}></Route>
           <Route path="location" element={<About/>}></Route>
+        </Route>
+        <Route path='/event' element={<EventPage></EventPage>}>
+          <Route path='one' element={<p>첫 주문시 신발 1+1 이벤트</p>}></Route>
+          <Route path='two' element={<p>생일 기념 쿠폰 발급받기</p>}></Route>
         </Route>
       </Routes>
     </div>
   );
 }
+
 function About () {
   return (
     <div>
       <h4>회사정보임</h4>
+      <Outlet></Outlet>
+    </div>
+  )
+}
+
+function EventPage() {
+  return (
+    <div>
+      <h4>오늘의 이벤트</h4>
       <Outlet></Outlet>
     </div>
   )
