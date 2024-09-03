@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import data from './Routes/data.js'
+import data from './data.js'
 import { useState } from 'react';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import Detail from './Routes/Detail.js';
@@ -35,7 +35,7 @@ function App() {
           </div>
           </>
         }></Route>
-        <Route path='/detail' element={<Detail/>}></Route>
+        <Route path="/detail/:id" element={<Detail shoes={shoes}/>}></Route>
         <Route path="*" element={<div>없는 페이지입니다 404 Error</div>}></Route>
         <Route path="/about" element={<About/>}>
           <Route path="member" element={<div>맴버입니다</div>}></Route>
