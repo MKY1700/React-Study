@@ -1,6 +1,6 @@
 # React-Study
 
-#Introduction
+# Introduction
 React 학습 과정을 기록한 프로젝트 입니다. 수업에서 학습한 내용을 날짜별로 정리하고, 코드를 공유합니다.
 
 # Getting Started
@@ -8,14 +8,17 @@ React 학습 과정을 기록한 프로젝트 입니다. 수업에서 학습한 
 ```bash
 git clone ~~~
 ```
+
 2. install npm packages
 ```bash
 npm install
 ```
+
 3. Start Development Server
 ```bash
 npm start
 ```
+
 4. Open Browser
 ```
 http://localhost:3000
